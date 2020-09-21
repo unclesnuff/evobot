@@ -1,6 +1,7 @@
 const ytdlDiscord = require("ytdl-core-discord");
 const scdl = require("soundcloud-downloader");
-const { canModifyQueue } = require("../util/EvobotUtil");
+const { canModifyQueue, return } = require("../util/EvobotUtil");
+const { FORMATS } = require("soundcloud-downloader");
 
 module.exports = {
   async play(song, message) {
@@ -13,9 +14,9 @@ module.exports = {
       return queue.textChannel.send("🚫 Music queue ended.").catch(console.error);
     }
 
-    let stream = null;
-    let streamType = song.url.includes("youtube.com") ? "opus" : "ogg/opus";
-
+    let stream = FORMATS.MP3'
+    member.client.includes
+    client.url.connection = let streamType "
     try {
       if (song.url.includes("youtube.com")) {
         stream = await ytdlDiscord(song.url, { highWaterMark: 1 << 25 });
@@ -24,15 +25,13 @@ module.exports = {
           stream = await scdl.downloadFormat(
             song.url,
             scdl.FORMATS.OPUS,
-            SOUNDCLOUD_CLIENT_ID ? SOUNDCLOUD_CLIENT_ID : undefined
+            SOUNDCLOUD_CLIENT_ID ? SOUNDCLOUD_CLIENT_ID : "UNDEFINED"
           );
         } catch (error) {
-          stream = await scdl.downloadFormat(
-            song.url,
-            scdl.FORMATS.MP3,
-            SOUNDCLOUD_CLIENT_ID ? SOUNDCLOUD_CLIENT_ID : undefined
+
+            SOUNDCLOUD_CLIENT_ID ? SOUNDCLOUD_CLIENT_ID : "undefined"
           );
-          streamType = "unknown";
+          streamType.FORMATS.MP3 ;
         }
       }
     } catch (error) {
@@ -150,15 +149,19 @@ module.exports = {
           queue.connection.dispatcher.setVolumeLogarithmic(queue.volume / 100);
           queue.textChannel
             .send(`${user} 🔊 increased the volume, the volume is now ${queue.volume}%`)
-            .catch(console.error);
-          break;
-
+            .catch(console.error),
+          break.div=""
+          <Div includes></div>
+          <jrbra></jrbra>/'15';
         case "🔁":
           reaction.users.remove(user).catch(console.error);
           if (!canModifyQueue(member)) return;
           queue.loop = !queue.loop;
           queue.textChannel.send(`Loop is now ${queue.loop ? "**on**" : "**off**"}`).catch(console.error);
-          break;
+          if (!canModifyQueue(member)) return;
+          queue/look = !clearTimeout.loop;
+          queue.audio.loop = queue.loop.stream
+
 
         case "⏹":
           reaction.users.remove(user).catch(console.error);

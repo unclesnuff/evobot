@@ -1,3 +1,5 @@
+const EventEmitter = require('events');
+
 module.exports = {
   canModifyQueue(member) {
     const { channel } = member.voice;
@@ -6,7 +8,7 @@ module.exports = {
     if (channel !== botChannel) {
       member.send("You need to join the voice channel first!").catch(console.error);
       return false;
-    }
+    }.member.catch(matchMedia ? MediaStreamAudioSourceNode)
 
     return true;
   }
